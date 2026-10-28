@@ -39,7 +39,9 @@ def docs(events, day: str, here: Path, wip: bool = False) -> dict:
         'record_to': last,
         'checked_on': day,
         'built': day,
-        'record_note': (f'Original texts and every amendment note printed by the Bureau of Experts portal '
+        'record_note': ("Later versions are replayed from the BOE's amendment notes; no official consolidation exists "
+                        'to check them. '
+                        f'Original texts and every amendment note printed by the Bureau of Experts portal '
                         f'(laws.boe.gov.sa, Wayback captures of January 2026), replayed; checked {day}. Later versions '
                         f'are replays of editorial notes, not official consolidations; {n_na} note(s) could not be '
                         f'applied exactly and are named in Not-applied trailers. Dates of royal decrees without a '
@@ -187,6 +189,8 @@ The author of a commit is the instrument that made the text (`Royal Decree M/46 
 not change must equal the original text byte for byte and as a stream of letters and digits read from the raw page by a
 separate minimal extractor; each change an instrument made must consist only of words found in that instrument's notes.
 `tools/test_repo.py` checks that the commands above work. See [`REPRODUCE.md`](REPRODUCE.md).
+Later versions are replayed from the BOE's amendment notes; no official consolidation exists to check them, so the
+checks show that each change is the notes' own words, not that the result matches an official text.
 {ok}
 ## Files
 

@@ -34,7 +34,7 @@ git (history written with one `git fast-import` stream), curl (Windows). Builder
 - `source.py`: `dbf396b9f5784e1d6b186d3370a20ee84e0f27b4`
 - `parse.py`: `e4ecdf79f0193abb3dfa36641730a72b0e992eca`
 - `replay.py`: `4f06197df05a381cfcf1e181ba4742c6e3ef5085`
-- `reproduce.py`: `6a492c9ffb3b25731ed6ca9412b79d1cc419daa5`
+- `reproduce.py`: `84177be3cab5ab7b2de298a594cacbc2756e10dd`
 - `check_repo.py`: `afce58511143bf1993d4c5fcc7067f754fc65d74`
 - `test_repo.py`: `6a1b1ab02b89645c700dcfb34ec82744588b9fc2`
 - `salaw.py`: `6b21f168969a90ce88aa17e7fb11838a569eddc9`

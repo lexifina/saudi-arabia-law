@@ -87,6 +87,8 @@ The author of a commit is the instrument that made the text (`Royal Decree M/46 
 not change must equal the original text byte for byte and as a stream of letters and digits read from the raw page by a
 separate minimal extractor; each change an instrument made must consist only of words found in that instrument's notes.
 `tools/test_repo.py` checks that the commands above work. See [`REPRODUCE.md`](REPRODUCE.md).
+Later versions are replayed from the BOE's amendment notes; no official consolidation exists to check them, so the
+checks show that each change is the notes' own words, not that the result matches an official text.
 - check_repo.py: 11 versions, 2104 file checks: 0 mismatches with the page, 0 unsourced changes, 0 Affecting-trailer differences
 - test_repo.py: 6/6 passed
 
