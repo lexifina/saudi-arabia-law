@@ -1,9 +1,9 @@
 # Saudi law, change by change
 
-4 Saudi laws as a git repository, in Arabic, from the Bureau of Experts at the Council of Ministers
+16 Saudi laws as a git repository, in Arabic, from the Bureau of Experts at the Council of Ministers
 (laws.boe.gov.sa). Each law starts as enacted; each later royal order or decree that amended it is one commit, credited
 to that instrument and dated the day it took effect, at noon in Riyadh. Hijri dates are in the trailers.
-13 commits of law: 4 enactments and 9 amending instruments.
+38 commits of law: 16 enactments and 22 amending instruments.
 
 **Every version after the first is a replay.** The portal prints each law's original text and, under each changed
 article, editorial notes naming the amending instrument and quoting the new words. No consolidated text of any later
@@ -15,7 +15,19 @@ REPRODUCE.md). Notes that cannot be applied exactly are left out and named in `N
 | Folder | Name | English name (ours) | Issued by | In force | Amending instruments |
 | --- | --- | --- | --- | --- | --- |
 | `basic-law-of-governance` | النظام الأساسي للحكم | Basic Law of Governance | Royal Order A/90 of 27/8/1412 H | 1992-03-06 | 2 |
+| `law-m-76-1424` | نظام وحدات الإخصاب والأجنة وعلاج العقم | Law issued by Royal Decree M/76 of 21/11/1424 H | Royal Decree M/76 of 21/11/1424 H | 2005-04-23 | 0 |
 | `labour-law` | نظام العمل | Labour Law | Royal Decree M/51 of 23/8/1426 H | 2006-04-26 | 7 |
+| `arbitration-law` | نظام التحكيم | Arbitration Law | Royal Decree M/34 of 24/5/1433 H | 2012-07-08 | 2 |
+| `law-of-procedure-before-sharia-courts` | نظام المرافعات الشرعية | Law of Procedure before Sharia Courts | Royal Decree M/1 of 22/1/1435 H | 2013-12-06 | 9 |
+| `law-m-61-1435` | نظام المجالس البلدية | Law issued by Royal Decree M/61 of 4/10/1435 H | Royal Decree M/61 of 4/10/1435 H | 2015-02-25 | 0 |
+| `food-law` | نظام الغذاء | Food Law | Royal Decree M/1 of 6/1/1436 H | 2015-06-10 | 0 |
+| `law-of-civil-society-associations-and-organizations` | نظام الجمعيات والمؤسسات الأهلية | Law of Civil Society Associations and Organizations | Royal Decree M/8 of 19/2/1437 H | 2016-03-17 | 0 |
+| `law-m-128-1440` | نظام المنافسات و المشتريات الحكومية | Law issued by Royal Decree M/128 of 13/11/1440 H | Royal Decree M/128 of 13/11/1440 H | 2019-11-29 | 0 |
+| `law-m-165-1441` | نظام البيئة | Law issued by Royal Decree M/165 of 19/11/1441 H | Royal Decree M/165 of 19/11/1441 H | 2021-01-13 | 0 |
+| `notarization-law` | نظام التوثيق | Notarization Law | Royal Decree M/164 of 19/11/1441 H | 2021-01-13 | 2 |
+| `personal-status-law` | نظام الأحوال الشخصية | Personal Status Law | Royal Decree M/73 of 6/8/1443 H | 2022-06-16 | 0 |
+| `law-of-evidence` | نظام الإثبات | Law of Evidence | Royal Decree M/43 of 26/5/1443 H | 2022-07-06 | 0 |
+| `law-m-106-1443` | نظام الاتصالات وتقنية المعلومات | Law issued by Royal Decree M/106 of 2/11/1443 H | Royal Decree M/106 of 2/11/1443 H | 2022-12-07 | 0 |
 | `companies-law` | نظام الشركات | Companies Law | Royal Decree M/132 of 1/12/1443 H | 2023-01-18 | 0 |
 | `civil-transactions-law` | نظام المعاملات المدنية | Civil Transactions Law | Royal Decree M/191 of 29/11/1444 H | 2023-12-16 | 0 |
 
@@ -66,8 +78,20 @@ The author of a commit is the instrument that made the text (`Royal Decree M/46 
 
 - **Replayed, not consolidated.** Only the first commit of each law is the portal's own text; later files are built
   from the notes' quoted words. Typography inside a quote is the note's.
-- **Not applied** (1):
+- **Not applied** (13):
+- `law-of-procedure-before-sharia-courts/m-14-1440`, law-of-procedure-before-sharia-courts/article-041.md (unclassified): wording not read by the replay: - إضافة فقرة تحمل الترتيب (3) وذلك بموجب المرسوم الملكي رقم (م/14) وتاريخ 1440/2/22هـ، وذلك بالنص ال
 - `labour-law/m-134-1440`, labour-law/article-002.md (def-replace): the definition "العامل:" is not printed in the article (found 0)
+- `law-of-procedure-before-sharia-courts/m-18-1442`, law-of-procedure-before-sharia-courts/article-011.md (unclassified): wording not read by the replay: - عُدلت هذه المادة بموجب المرسوم الملكي رقم (م/18) وتاريخ 1442/1/15هـ.
+- `law-of-procedure-before-sharia-courts/m-18-1442`, law-of-procedure-before-sharia-courts/article-012.md (unclassified): wording not read by the replay: - عُدلت هذه المادة بموجب المرسوم الملكي رقم (م/18) وتاريخ 1442/1/15هـ.
+- `law-of-procedure-before-sharia-courts/m-18-1442`, law-of-procedure-before-sharia-courts/article-013.md (unclassified): wording not read by the replay: - عُدلت هذه المادة بموجب المرسوم الملكي رقم (م/18) وتاريخ 1442/1/15هـ
+- `law-of-procedure-before-sharia-courts/m-18-1442`, law-of-procedure-before-sharia-courts/article-016.md (unclassified): wording not read by the replay: - عُدلت هذه المادة بموجب المرسوم الملكي رقم (م/18) وتاريخ 1442/1/15هـ.
+- `law-of-procedure-before-sharia-courts/m-101-1442`, law-of-procedure-before-sharia-courts/article-031.md (unclassified): wording not read by the replay: - حذف الفقرة (ب) من هذه المادة وذلك بموجب المرسوم الملكي رقم (م/101) وتاريخ 1442/11/14هـ.
+- `law-of-procedure-before-sharia-courts/m-101-1442`, law-of-procedure-before-sharia-courts/article-218.md (para): paragraph (1) found 0 times
+- `arbitration-law/m-8-1443`, arbitration-law/article-024.md (unclassified): wording not read by the replay: - حُذفت الفقرة (1) من هذه المادة وذلك بموجب المرسوم الملكي رقم (م/8) وتاريخ 1443/1/18هـ.
+- `law-of-procedure-before-sharia-courts/m-191-1444`, law-of-procedure-before-sharia-courts/article-211.md (unclassified): wording not read by the replay: - إلغاء عبارة
+- `notarization-law/m-191-1444`, notarization-law/article-015.md (para): paragraph (8) found 0 times
+- `notarization-law/m-21-1447`, notarization-law/article-011.md (para): paragraph (6) found 0 times
+- `notarization-law/m-21-1447`, notarization-law/article-040.md (para): paragraph (2) found 0 times
 - **Article files** hold the article of that number in the text in force; a renumbering moves text between files.
 - **The portal's own text has errors**, kept as printed.
 - **Blame credits whole lines**: one line is one paragraph. Use `--word-diff` for the words.
