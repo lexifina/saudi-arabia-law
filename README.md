@@ -1,9 +1,9 @@
 # Saudi law, change by change
 
-16 Saudi laws as a git repository, in Arabic, from the Bureau of Experts at the Council of Ministers
+28 Saudi laws as a git repository, in Arabic, from the Bureau of Experts at the Council of Ministers
 (laws.boe.gov.sa). Each law starts as enacted; each later royal order or decree that amended it is one commit, credited
 to that instrument and dated the day it took effect, at noon in Riyadh. Hijri dates are in the trailers.
-38 commits of law: 16 enactments and 22 amending instruments.
+51 commits of law: 28 enactments and 23 amending instruments.
 
 **Every version after the first is a replay.** The portal prints each law's original text and, under each changed
 article, editorial notes naming the amending instrument and quoting the new words. No consolidated text of any later
@@ -17,19 +17,31 @@ REPRODUCE.md). Notes that cannot be applied exactly are left out and named in `N
 | `basic-law-of-governance` | النظام الأساسي للحكم | Basic Law of Governance | Royal Order A/90 of 27/8/1412 H | 1992-03-06 | 2 |
 | `law-m-76-1424` | نظام وحدات الإخصاب والأجنة وعلاج العقم | Law issued by Royal Decree M/76 of 21/11/1424 H | Royal Decree M/76 of 21/11/1424 H | 2005-04-23 | 0 |
 | `labour-law` | نظام العمل | Labour Law | Royal Decree M/51 of 23/8/1426 H | 2006-04-26 | 7 |
+| `electronic-transactions-law` | نظام التعاملات الإلكترونية | Electronic Transactions Law | Royal Decree M/18 of 8/3/1428 H | 2007-08-15 | 1 |
+| `law-m-38-1428` | نظام المتفجرات والمفرقعات | Law issued by Royal Decree M/38 of 28/4/1428 H | Royal Decree M/38 of 28/4/1428 H | 2007-10-06 | 0 |
 | `arbitration-law` | نظام التحكيم | Arbitration Law | Royal Decree M/34 of 24/5/1433 H | 2012-07-08 | 2 |
 | `law-of-procedure-before-sharia-courts` | نظام المرافعات الشرعية | Law of Procedure before Sharia Courts | Royal Decree M/1 of 22/1/1435 H | 2013-12-06 | 9 |
+| `penal-law-on-forgery-crimes` | النظام الجزائي لجرائم التزوير | Penal Law on Forgery Crimes | Royal Decree M/11 of 18/2/1435 H | 2014-03-09 | 0 |
 | `law-m-61-1435` | نظام المجالس البلدية | Law issued by Royal Decree M/61 of 4/10/1435 H | Royal Decree M/61 of 4/10/1435 H | 2015-02-25 | 0 |
 | `food-law` | نظام الغذاء | Food Law | Royal Decree M/1 of 6/1/1436 H | 2015-06-10 | 0 |
 | `law-of-civil-society-associations-and-organizations` | نظام الجمعيات والمؤسسات الأهلية | Law of Civil Society Associations and Organizations | Royal Decree M/8 of 19/2/1437 H | 2016-03-17 | 0 |
+| `law-of-nuclear-and-radiation-control` | نظام الرقابة على الاستخدامات النووية والاشعاعية | Law of Nuclear and Radiation Control | Royal Decree M/82 of 25/7/1439 H | 2018-10-21 | 0 |
 | `law-m-128-1440` | نظام المنافسات و المشتريات الحكومية | Law issued by Royal Decree M/128 of 13/11/1440 H | Royal Decree M/128 of 13/11/1440 H | 2019-11-29 | 0 |
+| `law-m-85-1441` | نظام ملكية الوحدات العقارية وفرزها وإدارتها | Law issued by Royal Decree M/85 of 2/7/1441 H | Royal Decree M/85 of 2/7/1441 H | 2020-09-09 | 0 |
 | `law-m-165-1441` | نظام البيئة | Law issued by Royal Decree M/165 of 19/11/1441 H | Royal Decree M/165 of 19/11/1441 H | 2021-01-13 | 0 |
 | `notarization-law` | نظام التوثيق | Notarization Law | Royal Decree M/164 of 19/11/1441 H | 2021-01-13 | 2 |
+| `law-m-38-1442` | نظام معالجة المنشآت المالية المهمة | Law issued by Royal Decree M/38 of 25/4/1442 H | Royal Decree M/38 of 25/4/1442 H | 2021-06-16 | 0 |
+| `law-m-3-1443` | نظام إدارة النفايات | Law issued by Royal Decree M/3 of 5/1/1443 H | Royal Decree M/3 of 5/1/1443 H | 2021-11-16 | 0 |
 | `personal-status-law` | نظام الأحوال الشخصية | Personal Status Law | Royal Decree M/73 of 6/8/1443 H | 2022-06-16 | 0 |
 | `law-of-evidence` | نظام الإثبات | Law of Evidence | Royal Decree M/43 of 26/5/1443 H | 2022-07-06 | 0 |
+| `law-m-91-1443` | نظام التسجيل العيني للعقار | Law issued by Royal Decree M/91 of 19/9/1443 H | Royal Decree M/91 of 19/9/1443 H | 2022-08-11 | 0 |
 | `law-m-106-1443` | نظام الاتصالات وتقنية المعلومات | Law issued by Royal Decree M/106 of 2/11/1443 H | Royal Decree M/106 of 2/11/1443 H | 2022-12-07 | 0 |
 | `companies-law` | نظام الشركات | Companies Law | Royal Decree M/132 of 1/12/1443 H | 2023-01-18 | 0 |
+| `law-m-60-1444` | نظام المعالجات التجارية في التجارة الدولية | Law issued by Royal Decree M/60 of 29/4/1444 H | Royal Decree M/60 of 29/4/1444 H | 2023-03-02 | 0 |
+| `law-m-203-1444` | نظام المساهمات العقارية | Law issued by Royal Decree M/203 of 28/12/1444 H | Royal Decree M/203 of 28/12/1444 H | 2023-11-18 | 0 |
 | `civil-transactions-law` | نظام المعاملات المدنية | Civil Transactions Law | Royal Decree M/191 of 29/11/1444 H | 2023-12-16 | 0 |
+| `law-m-27-1445` | نظام حقوق الأشخاص ذوي الإعاقة | Law issued by Royal Decree M/27 of 11/2/1445 H | Royal Decree M/27 of 11/2/1445 H | 2024-01-06 | 0 |
+| `law-m-36-1446` | نظام سلامة المنتجات | Law issued by Royal Decree M/36 of 29/1/1446 H | Royal Decree M/36 of 29/1/1446 H | 2024-11-14 | 0 |
 
 The first two (the Basic Law of Governance and the Labour Law) were built first; the others were appended later, each as
 one block of commits on top of the history, so `git log` lists them after the first two. Read versions by their
