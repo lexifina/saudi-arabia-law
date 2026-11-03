@@ -6,10 +6,13 @@ Data last read 2026-11-03.
 
 Each law is the Arabic page of the Bureau of Experts portal, as archived by the Internet Archive on the day given:
 - `basic-law-of-governance`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/16b97fcb-4833-4f66-8531-a9a700f161b6/1 (Internet Archive capture `20260114204621`)
+- `law-m-15-1424`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/25450917-e26c-4532-a75f-a9a700f21996/1 (Internet Archive capture `20260114004350`)
 - `law-m-76-1424`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/4943163b-a079-4beb-b544-a9a700f286b1/1 (Internet Archive capture `20260225112415`)
 - `labour-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/08381293-6388-48e2-8ad2-a9a700f2aa94/1 (Internet Archive capture `20260128140901`)
+- `law-m-61-1427`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/4e666adb-96c8-4252-a12d-a9a700f21620/1 (Internet Archive capture `20250516132322`)
 - `electronic-transactions-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/6f509360-2c39-4358-ae2a-a9a700f2ed16/1 (Internet Archive capture `20260215163738`)
 - `law-m-38-1428`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/a05632b0-ac19-4659-af2a-a9a700f18337/1 (Internet Archive capture `20260114015335`)
+- `law-m-6-1433`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/98b1d2e8-4724-439b-af00-a9a700f255ef/1 (Internet Archive capture `20260113235650`)
 - `arbitration-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/5535039e-13da-43f6-8f53-a9a700f26485/1 (Internet Archive capture `20260123203858`)
 - `law-of-procedure-before-sharia-courts`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/f0eaae46-9f84-40ee-815e-a9a700f268b3/1 (Internet Archive capture `20260301031524`)
 - `penal-law-on-forgery-crimes`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/c1878d16-7ce0-4710-993b-a9a700f17ac5/1 (Internet Archive capture `20260227091430`)
@@ -17,10 +20,14 @@ Each law is the Arabic page of the Bureau of Experts portal, as archived by the 
 - `food-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/9167ec51-a011-4a22-b6c3-a9a700f290f8/1 (Internet Archive capture `20251212211808`)
 - `law-of-civil-society-associations-and-organizations`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/37e0768f-8e3c-493a-b951-a9a700f2bbb1/1 (Internet Archive capture `20251017141427`)
 - `law-of-nuclear-and-radiation-control`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/c447d12a-6c10-40c2-a51e-a9f7000a97cb/1 (Internet Archive capture `20260117123216`)
+- `law-m-106-1439`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/552d21ef-81c0-4373-bd8a-a9f6016398ef/1 (Internet Archive capture `20251117222638`)
 - `law-m-128-1440`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/24c563f9-7292-49c8-b0fb-aa9800b999f1/1 (Internet Archive capture `20251215151035`)
+- `franchise-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/af2a6b93-51dd-4f16-b781-aafd00d9fbbc/1 (Internet Archive capture `20260215021225`)
 - `law-m-85-1441`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/d19fbfe8-6517-4e8b-b06a-b09000cefe1b/1 (Internet Archive capture `20260215024359`)
 - `law-m-165-1441`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/63831ff6-63d9-4212-8b54-abf800e146bd/1 (Internet Archive capture `20251015123655`)
 - `notarization-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/40754577-f250-47f6-8a5a-abf600af7d72/1 (Internet Archive capture `20251116122303`)
+- `anti-concealment-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/bf9e0aae-6df6-4785-a305-ac2300bd0856/1 (Internet Archive capture `20251215152710`)
+- `social-security-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/7799b707-e228-452c-8b19-ac7b00b4b64e/1 (Internet Archive capture `20260209120108`)
 - `law-m-38-1442`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/82b804f6-0075-47c2-a772-acc4002f8b3e/1 (Internet Archive capture `20250619193241`)
 - `law-m-3-1443`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/4d5bda56-cc0d-4b16-a025-ad9d00b281ab/1 (Internet Archive capture `20251212222819`)
 - `personal-status-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/4d72d829-947b-45d5-b9b5-ae5800d6bac2/1 (Internet Archive capture `20260215024832`)
@@ -32,7 +39,12 @@ Each law is the Arabic page of the Bureau of Experts portal, as archived by the 
 - `law-m-203-1444`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/5efb6f40-d859-47e6-9c8a-b04500943ecc/1 (Internet Archive capture `20251116120337`)
 - `civil-transactions-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/655fdb42-8c96-422b-b8c4-b04f0095c94c/1 (Internet Archive capture `20260114005922`)
 - `law-m-27-1445`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/e52b691a-785c-42a7-8916-b07d00e4fd38/1 (Internet Archive capture `20260215023829`)
+- `law-m-25-1446`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/a8ebff8e-412c-4f67-ac5f-b1ca008d18d9/1 (Internet Archive capture `20260215014056`)
 - `law-m-36-1446`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/7f147afb-5a81-4744-a4bf-b1cd00b831ea/1 (Internet Archive capture `20251116114910`)
+- `law-m-36-1446-m-36`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/c487b0ff-8e52-442d-bf62-b1cd009fdc57/1 (Internet Archive capture `20251212223342`)
+- `commercial-register-law`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/d0e0ea69-e88b-471a-9773-b20900a51be6/1 (Internet Archive capture `20250403044828`)
+- `commercial-register-law-m-83`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/98ee4b51-d398-4323-ae69-b2b8009f3156/1 (Internet Archive capture `20260209120929`)
+- `law-m-83-1446`: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/d4801a45-7f76-4414-bdca-b20900db6fc4/1 (Internet Archive capture `20251212212337`)
 
 ## Method
 
