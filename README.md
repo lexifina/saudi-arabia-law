@@ -1,5 +1,7 @@
 # Saudi law, change by change
 
+Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Saudi Arabia's national law, which global-law reads at `saudi-arabia/national/acts/`.
+
 40 Saudi laws as a git repository, in Arabic, from the Bureau of Experts at the Council of Ministers
 (laws.boe.gov.sa). Each law starts as enacted; each later royal order or decree that amended it is one commit, credited
 to that instrument and dated the day it took effect, at noon in Riyadh. Hijri dates are in the trailers.
