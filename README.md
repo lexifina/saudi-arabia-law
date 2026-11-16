@@ -1,34 +1,41 @@
-# Saudi Arabia: law history in git
+# المملكة العربية السعودية: تاريخ القانون في git
 
-The law of Saudi Arabia as a git history: one file per article, one commit per version on the day it took effect, and the royal decree or order that made each change as the commit's author. `git blame` names the decree or order behind every paragraph; `git log` lists every change to an article; picking a date gives the text in force that day.
+**العربية** · [English](README.en.md)
 
-Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Saudi Arabia's national law, which global-law reads at `saudi-arabia/national/acts/`.
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="data/ar/effort-dark.svg">
+<img alt="القانون السعودي في هذا المستودع: ما يحتويه، والتعديلات حسب سنة نفاذها، والاكتمال مقارنةً بالمصادر الرسمية، وصحة المحتوى" src="data/ar/effort-light.svg" width="880">
+</picture>
 
-**What is in it now:** 40 laws from the laws portal of the Bureau of Experts at the Council of Ministers, with 63 versions: each law as enacted (the Basic Law of Governance of 1992 and 39 laws in force from 2004 to 2025; the Commercial Register Law is here twice, from two pages of the portal) and 23 later versions of six of them, made by the royal decrees and orders that amended them (9 of the Law of Procedure before Sharia Courts, 7 of the Labour Law). The portal prints only each law's original text, with its amendments as notes under the articles, so every later version is that text with the notes applied. [`instruments.csv`](instruments.csv) lists every version, by law, with its Gregorian and Hijri dates and how its in-force day was read.
+القانون السعودي في صورة سجل git: ملف واحد لكل مادة، وcommit واحد لكل نسخة في يوم نفاذها، والمرسوم الملكي أو الأمر الملكي الذي أجرى كل تعديل هو مؤلف الـ commit. يذكر `git blame` المرسوم أو الأمر الذي يقف وراء كل فقرة؛ ويسرد `git log` كل تعديل طرأ على مادة ما؛ واختيار تاريخ ما يعطي النص النافذ في ذلك اليوم.
 
-Each law is a folder with one file per article (`labour-law/` is نظام العمل, the Labour Law, Royal Decree M/51 of 23/8/1426 H, and `labour-law/article-074.md` its Article 74, on the end of the employment contract; `labour-law/article-011-bis.md` is its Article 11 مكرر). Laws without a short English name are named by their decree (`law-m-91-1443/` is Royal Decree M/91 of 19/9/1443 H). Each folder's `preamble.md` holds the issuing instrument and `structure.md` its parts and chapters.
+جزء من [lexifina/global-law](https://github.com/lexifina/global-law)، وهو سجل git واحد لقوانين جميع الدول: هذا هو القانون الوطني السعودي، الذي يقرؤه global-law في `saudi-arabia/national/acts/`.
 
-The text is in Arabic, as the portal prints it, errors included; only the Official Gazette (Umm al-Qura) is authoritative. The portal's English translations are not part of this record.
+**ما يحتويه الآن:** 40 نظامًا من بوابة الأنظمة لهيئة الخبراء بمجلس الوزراء، في 63 نسخة: كل نظام كما صدر (النظام الأساسي للحكم لعام 1992 و39 نظامًا نفذت من 2004 إلى 2025؛ ويرد نظام السجل التجاري هنا مرتين، من صفحتين مختلفتين في البوابة) و23 نسخة لاحقة لستة منها، أوجدتها المراسيم والأوامر الملكية التي عدّلتها (9 لنظام المرافعات الشرعية، و7 لنظام العمل). لا تنشر البوابة إلا النص الأصلي لكل نظام، مع تعديلاته في صورة حواشٍ تحت المواد، لذا فكل نسخة لاحقة هي ذلك النص بعد تطبيق الحواشي عليه. يسرد [`instruments.csv`](instruments.csv) كل نسخة، مرتبة حسب النظام، مع تاريخيها الميلادي والهجري وكيفية تحديد يوم نفاذها.
 
-## Questions as git commands
+كل نظام مجلد فيه ملف واحد لكل مادة (`labour-law/` هو نظام العمل، الصادر بالمرسوم الملكي رقم (م/51) وتاريخ 23/8/1426هـ، و`labour-law/article-074.md` هي المادة 74 منه، بشأن انتهاء عقد العمل؛ و`labour-law/article-011-bis.md` هي المادة 11 مكرر منه). وتُسمّى الأنظمة التي ليس لها اسم إنجليزي مختصر باسم مرسومها (`law-m-91-1443/` هو المرسوم الملكي رقم (م/91) وتاريخ 19/9/1443هـ). ويحتوي `preamble.md` في كل مجلد على أداة الإصدار، و`structure.md` على أبوابه وفصوله.
 
-| Question | Command |
+النص باللغة العربية، كما تنشره البوابة، بما فيه من أخطاء؛ ولا يُعتمد إلا على الجريدة الرسمية (أم القرى). والترجمات الإنجليزية في البوابة ليست جزءًا من هذا السجل.
+
+## الأسئلة بصيغة أوامر git
+
+| السؤال | الأمر |
 | --- | --- |
-| Every change to Article 74 of the Labour Law | `git log -p --word-diff -- labour-law/article-074.md` |
-| Which decree wrote each line of Article 74? | `git blame labour-law/article-074.md` |
-| Every version of the Labour Law, with the day each took effect | `git log --format="%h %(trailers:key=In-force,valueonly,separator=) %an" -- labour-law` |
-| Article 74 as in force on 1 January 2016 | `python tools/salaw.py 2016-01-01 labour-law 74` |
+| كل تعديل طرأ على المادة 74 من نظام العمل | `git log -p --word-diff -- labour-law/article-074.md` |
+| أي مرسوم كتب كل سطر من المادة 74؟ | `git blame labour-law/article-074.md` |
+| كل نسخ نظام العمل، مع يوم نفاذ كل منها | `git log --format="%h %(trailers:key=In-force,valueonly,separator=) %an" -- labour-law` |
+| المادة 74 كما كانت نافذة في 1 يناير 2016 | `python tools/salaw.py 2016-01-01 labour-law 74` |
 
-**Outside git**, we also host this record publicly, for free:
+**خارج git**، نستضيف هذا السجل أيضًا للعموم مجانًا:
 
-- **[Ask Claude about Saudi law](https://global-law.lexifina.com/v1/try_claude?country=saudi-arabia)**: opens Claude with a first question ready.
-- **[Ask ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=saudi-arabia)**: the same question in ChatGPT.
-- **[Search Saudi law on our site](https://lexifina.com/law?country=saudi-arabia&q=%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9+%D8%B3%D9%86%D9%88%D9%8A%D8%A9)**: a search for "إجازة سنوية" (annual leave), with each provision's text and its versions, no account needed.
-- **[Developer REST API](https://global-law.lexifina.com/v1/search_law?query=%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9+%D8%B3%D9%86%D9%88%D9%8A%D8%A9&jurisdiction=saudi-arabia)**: the same search as JSON, with no key. See the [documentation here](https://lexifina.com/api/global-law).
+- **[اسأل Claude عن القانون السعودي](https://global-law.lexifina.com/v1/try_claude?country=saudi-arabia)**: يفتح Claude مع سؤال أول جاهز.
+- **[اسأل ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=saudi-arabia)**: السؤال نفسه في ChatGPT.
+- **[ابحث في القانون السعودي على موقعنا](https://lexifina.com/law?country=saudi-arabia&q=%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9+%D8%B3%D9%86%D9%88%D9%8A%D8%A9)**: بحث عن "إجازة سنوية"، مع نص كل حكم ونسخه، دون الحاجة إلى حساب.
+- **[واجهة REST API للمطورين](https://global-law.lexifina.com/v1/search_law?query=%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9+%D8%B3%D9%86%D9%88%D9%8A%D8%A9&jurisdiction=saudi-arabia)**: البحث نفسه بصيغة JSON، دون مفتاح. انظر [التوثيق هنا](https://lexifina.com/api/global-law).
 
-Both assistants read the record through the free Global law connector (MCP, `https://global-law.lexifina.com/mcp`); the first time, the chat gives you the link that adds it. Ask in Arabic or in English.
+يقرأ كلا المساعدَين السجلَّ عبر موصل Global law المجاني (MCP، `https://global-law.lexifina.com/mcp`)؛ وفي المرة الأولى تعطيك المحادثة الرابط الذي يضيفه. اسأل بالعربية أو بالإنجليزية.
 
-**Host it yourself easily.** All it takes is git and Python, and the tools run on your machine:
+**استضِفه بنفسك بسهولة.** كل ما يلزم هو git وPython، والأدوات تعمل على جهازك:
 
 ```sh
 git clone --depth 1 https://github.com/lexifina/global-law && cd global-law
@@ -36,50 +43,52 @@ python3 tools/countries.py add saudi-arabia/national/acts
 python3 tools/law.py show 2026-01-01 saudi-arabia/national/acts/labour-law/article-074.md
 ```
 
-Opened in Claude Code, Cursor, VS Code or Codex, the clone also starts a local MCP server with the same tools ([MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md)).
+عند فتح النسخة المستنسخة في Claude Code أو Cursor أو VS Code أو Codex، تشغّل أيضًا خادم MCP محليًا بالأدوات نفسها ([MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md)).
 
-## Dates
+## التواريخ
 
-Each commit is dated at noon, Asia/Riyadh, on the day the version took effect, and carries it in its `In-force:` trailer, with the Hijri (Umm al-Qura) date in `In-force-hijri:` and how the day was read in `In-force-basis:`:
+يحمل كل commit تاريخ الظهر، بتوقيت Asia/Riyadh، من يوم نفاذ النسخة، ويذكر هذا التاريخ في حقله الختامي (trailer) `In-force:`، مع التاريخ الهجري (أم القرى) في `In-force-hijri:` وكيفية تحديد اليوم في `In-force-basis:`:
 
-- a law as enacted: its own commencement clause, counted from the publication day the portal gives (37 laws take effect a set number of days after publication, 3 on publication);
-- an amendment whose notes give a day (Royal Decree M/44 of 8/2/1446 H, for the Labour Law): that day;
-- the other 22 amendments: the day of the decree or order, as the notes give no publication or commencement day. Under Article 71 of the Basic Law a law takes effect on its publication in Umm al-Qura unless it says otherwise, so read these days as "not before".
+- النظام كما صدر: نص بدء النفاذ فيه، محسوبًا من يوم النشر الذي تذكره البوابة (37 نظامًا تنفذ بعد عدد محدد من الأيام من نشرها، و3 عند نشرها)؛
+- التعديل الذي تذكر حواشيه يومًا محددًا (المرسوم الملكي رقم (م/44) وتاريخ 8/2/1446هـ، لنظام العمل): ذلك اليوم؛
+- التعديلات الاثنان والعشرون الأخرى: يوم المرسوم أو الأمر، لأن الحواشي لا تذكر يوم نشر ولا يوم بدء نفاذ. وبموجب المادة 71 من النظام الأساسي للحكم، يُعمل بالنظام من تاريخ نشره في أم القرى ما لم ينص على خلاف ذلك، فاقرأ هذه الأيام على أنها "ليس قبل".
 
-Each version is credited to the royal decree or order that made it (`Royal Decree M/44 of 8/2/1446 H`, with an `.invalid` address), and each law as enacted to the instrument that issued it; a note naming several instruments is credited to the last one. The committer is Lexifina.
+تُنسب كل نسخة إلى المرسوم الملكي أو الأمر الملكي الذي أوجدها (`Royal Decree M/44 of 8/2/1446 H`، بعنوان بريد ينتهي بـ `.invalid`)، وكل نظام كما صدر إلى الأداة التي أصدرته؛ والحاشية التي تذكر عدة أدوات تُنسب إلى آخرها. وصاحب الـ commit (committer) هو Lexifina.
 
-## How it is checked
+## طريقة التحقق
 
-- Every version is read back from git and compared with the portal's page for that law (the Internet Archive capture named in `REPRODUCE.md`): each article a version did not change must equal the original text byte for byte, and as a stream of letters and digits read from the raw page by a separate, minimal extractor.
-- Each change an instrument made must consist only of words found in that instrument's notes. This shows each change is the notes' own words, not that the result matches an official consolidation: none is published.
-- History is append-only. Laws added later were appended on top as their own commits, so `git log` lists them after the Basic Law and the Labour Law; `tools/salaw.py` reads each version by its `In-force:` trailer, not by its place in the log.
+- تُعاد قراءة كل نسخة من git وتُقارَن بصفحة البوابة الخاصة بذلك النظام (لقطة Internet Archive المذكورة في `REPRODUCE.md`): يجب أن تطابق كل مادة لم تغيّرها النسخة النص الأصلي بايتًا ببايت، وكذلك كسلسلة من الحروف والأرقام يقرؤها من الصفحة الخام مستخرِج مستقل ومبسَّط.
+- يجب ألا يتكون كل تغيير أجرته أداة ما إلا من كلمات واردة في حواشي تلك الأداة. وهذا يبيّن أن كل تغيير هو كلمات الحواشي نفسها، لا أن النتيجة تطابق نصًا موحَّدًا رسميًا: إذ لا يُنشر أي نص من هذا القبيل.
+- السجل لا يقبل إلا الإضافة. أُلحقت الأنظمة المضافة لاحقًا فوقه في commits خاصة بها، لذا يسردها `git log` بعد النظام الأساسي للحكم ونظام العمل؛ ويقرأ `tools/salaw.py` كل نسخة بحسب حقلها الختامي `In-force:`، لا بحسب موضعها في السجل.
 
-## What it does not show
+## ما لا يتضمنه
 
-- **Official consolidated texts.** Only each law's first commit is the portal's own text; 13 amendment notes that could not be applied exactly are left out and named in `Not-applied:` trailers.
-- **Most Saudi laws.** The others on the portal, and laws whose commencement could not be counted, are not here yet.
-- **Implementing regulations, ministerial decisions and court decisions**: unchanged words do not mean unchanged law.
-- **Amendments the portal does not record as notes**, and parts of a law that took effect later than the rest (Article 74(4) of the Labour Law, two years after the law), which are not separate commits.
+- **النصوص الموحَّدة الرسمية.** لا يمثّل نصَّ البوابة نفسه إلا أولُ commit لكل نظام؛ وقد استُبعدت 13 حاشية تعديل تعذّر تطبيقها بدقة، وذُكرت في الحقول الختامية `Not-applied:`.
+- **معظم الأنظمة السعودية.** الأنظمة الأخرى في البوابة، والأنظمة التي تعذّر حساب بدء نفاذها، ليست هنا بعد.
+- **اللوائح التنفيذية والقرارات الوزارية والأحكام القضائية**: فثبات الألفاظ لا يعني ثبات القانون.
+- **التعديلات التي لا تسجّلها البوابة في صورة حواشٍ**، وأجزاء النظام التي نفذت بعد بقيته (الفقرة (4) من المادة 74 من نظام العمل، بعد سنتين من النظام)، وهي ليست commits مستقلة.
 
-## Sources
+## المصادر
 
-| Source | Kind | Past versions | Notes |
+| المصدر | النوع | النسخ السابقة | ملاحظات |
 | --- | --- | --- | --- |
-| [Laws portal of the Bureau of Experts at the Council of Ministers](https://laws.boe.gov.sa) (هيئة الخبراء بمجلس الوزراء) | Official legal portal: laws issued by royal decree or order, with their publication day | the original text, with the amendments as notes under each article | Arabic pages read through Internet Archive captures of 2025 and 2026 (listed in `REPRODUCE.md`), last read on 3 November 2026; English translations not used |
+| [بوابة الأنظمة لهيئة الخبراء بمجلس الوزراء](https://laws.boe.gov.sa) (هيئة الخبراء بمجلس الوزراء) | البوابة القانونية الرسمية: الأنظمة الصادرة بمرسوم ملكي أو أمر ملكي، مع يوم نشرها | النص الأصلي، مع التعديلات في صورة حواشٍ تحت كل مادة | صفحات عربية قُرئت عبر لقطات Internet Archive من عامي 2025 و2026 (مدرجة في `REPRODUCE.md`)، وآخر قراءة في 3 نوفمبر 2026؛ الترجمات الإنجليزية غير مستخدمة |
 
-## Licence
+## الترخيص
 
-See [`LICENSE`](LICENSE). The portal's terms of use make it available for personal use and publish no reuse licence; the texts are credited to the Bureau of Experts at the Council of Ministers, and only the Official Gazette (Umm al-Qura) is authoritative. Lexifina's history, commit messages, tables and tools are CC0 1.0.
+انظر [`LICENSE`](LICENSE). تتيح شروط استخدام البوابة محتواها للاستخدام الشخصي ولا تنشر أي ترخيص لإعادة الاستخدام؛ والنصوص منسوبة إلى هيئة الخبراء بمجلس الوزراء، ولا يُعتمد إلا على الجريدة الرسمية (أم القرى). أما السجل الذي أعدّته Lexifina ورسائل الـ commits والجداول والأدوات فخاضعة لـ CC0 1.0.
 
-No AI model wrote legal text or ran at build time; the code was written by an AI model, which also chose the laws and wrote their English names (see [`REPRODUCE.md`](REPRODUCE.md)).
+لم يكتب أي نموذج ذكاء اصطناعي نصًا قانونيًا ولم يعمل أي نموذج وقت البناء؛ أما الشيفرة فقد كتبها نموذج ذكاء اصطناعي، وهو الذي اختار الأنظمة أيضًا وكتب أسماءها الإنجليزية (انظر [`REPRODUCE.md`](REPRODUCE.md)).
 
-## More
+هذا النص ترجمة للنسخة الإنجليزية ([README.en.md](README.en.md))؛ وعند الاختلاف تسود النسخة الإنجليزية.
 
-From [lexifina/global-law](https://github.com/lexifina/global-law):
+## المزيد
 
-- [FEATURES.md](https://github.com/lexifina/global-law/blob/main/FEATURES.md): every feature, and what every corpus must support (`git blame`, `law.py`, the MCP tools)
-- [FAQ.md](https://github.com/lexifina/global-law/blob/main/FAQ.md): questions and answers · [CONTRIBUTING.md](https://github.com/lexifina/global-law/blob/main/CONTRIBUTING.md): proposing changes · [MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md): the MCP server · [REPRODUCE.md](https://github.com/lexifina/global-law/blob/main/REPRODUCE.md): how it was built · [CHANGELOG.md](https://github.com/lexifina/global-law/blob/main/CHANGELOG.md)
-- [FRESHNESS.md](https://github.com/lexifina/global-law/blob/main/FRESHNESS.md): how current each corpus is · [Monitoring](https://github.com/lexifina/global-law/tree/main/monitoring): whether updates are running · [WATCHING.md](https://github.com/lexifina/global-law/blob/main/WATCHING.md): how each official source is watched for changes
-- [performance/](https://github.com/lexifina/global-law/tree/main/performance): how fast the tools are, measured
-- [visualisations/](https://github.com/lexifina/global-law/tree/main/visualisations): charts and bridges across the world's law
-- [Vulnerabilities](https://github.com/lexifina/global-law/tree/main/vulnerabilities): mistakes in legislation as published
+من مستودع [lexifina/global-law](https://github.com/lexifina/global-law) (صفحات باللغة الإنجليزية):
+
+- [FEATURES.md](https://github.com/lexifina/global-law/blob/main/FEATURES.md): جميع الميزات، وما يجب أن تدعمه كل مجموعة (`git blame`، `law.py`، أدوات MCP)
+- [FAQ.md](https://github.com/lexifina/global-law/blob/main/FAQ.md): أسئلة وأجوبة · [CONTRIBUTING.md](https://github.com/lexifina/global-law/blob/main/CONTRIBUTING.md): اقتراح تغييرات · [MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md): خادم MCP · [REPRODUCE.md](https://github.com/lexifina/global-law/blob/main/REPRODUCE.md): طريقة البناء · [CHANGELOG.md](https://github.com/lexifina/global-law/blob/main/CHANGELOG.md)
+- [FRESHNESS.md](https://github.com/lexifina/global-law/blob/main/FRESHNESS.md): مدى حداثة كل مجموعة · [المراقبة](https://github.com/lexifina/global-law/tree/main/monitoring): هل تعمل التحديثات · [WATCHING.md](https://github.com/lexifina/global-law/blob/main/WATCHING.md): كيف يُراقَب كل مصدر رسمي لرصد التغييرات
+- [performance/](https://github.com/lexifina/global-law/tree/main/performance): سرعة الأدوات كما قيست
+- [visualisations/](https://github.com/lexifina/global-law/tree/main/visualisations): رسوم بيانية وروابط عبر قوانين العالم
+- [الثغرات](https://github.com/lexifina/global-law/tree/main/vulnerabilities): أخطاء في التشريعات كما نُشرت
