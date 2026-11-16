@@ -60,6 +60,7 @@ Each version is credited to the royal decree or order that made it (`Royal Decre
 - Every version is read back from git and compared with the portal's page for that law (the Internet Archive capture named in `REPRODUCE.md`): each article a version did not change must equal the original text byte for byte, and as a stream of letters and digits read from the raw page by a separate, minimal extractor.
 - Each change an instrument made must consist only of words found in that instrument's notes. This shows each change is the notes' own words, not that the result matches an official consolidation: none is published.
 - History is append-only. Laws added later were appended on top as their own commits, so `git log` lists them after the Basic Law and the Labour Law; `tools/salaw.py` reads each version by its `In-force:` trailer, not by its place in the log.
+- [vulnerabilities/](vulnerabilities/README.en.md): possible drafting mistakes in this law, found by global-law's detectors and checked by hand. Not run yet.
 
 ## What it does not show
 
@@ -79,6 +80,10 @@ Each version is credited to the royal decree or order that made it (`Royal Decre
 See [`LICENSE`](LICENSE). The portal's terms of use make it available for personal use and publish no reuse licence; the texts are credited to the Bureau of Experts at the Council of Ministers, and only the Official Gazette (Umm al-Qura) is authoritative. Lexifina's history, commit messages, tables and tools are CC0 1.0.
 
 No AI model wrote legal text or ran at build time; the code was written by an AI model, which also chose the laws and wrote their English names (see [`REPRODUCE.md`](REPRODUCE.md)).
+
+## Visualisations
+
+- [visualisations/](visualisations/README.en.md): charts drawn from this repository. Not drawn yet.
 
 ## More
 
